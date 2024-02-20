@@ -1,0 +1,44 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel-container {
+    position: relative;
+    max-width: 600px; /* Ancho máximo del carrusel */
+    overflow: hidden;
+  }
+  
+  .carousel-slide {
+    display: flex;
+    width: 100%; /* Ancho total del carrusel */
+    transition: transform 0.5s ease; /* Transición suave al cambiar de imagen */
+  }
+  
+  .carousel-slide img {
+    width: 100%; /* Ancho del contenedor */
+    max-height: 400px; /* Altura máxima de la imagen */
+    object-fit: cover; /* Ajusta la imagen dentro de su contenedor */
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  #prevBtn {
+    left: 0;
+  }
+  
+  #nextBtn {
+    right: 0;
+  }
+  

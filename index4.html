@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VERDADERO</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .btn-index1 {
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px; /* Ajusta el valor para cambiar la cantidad de redondeo */
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease; /* Agregar transición para un efecto suave */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 id="message">¿Completamente segura?</h2>
+        <button class="btn-index1" onclick="index1()" id="btnIndex1">Si</button>
+        <button class="btn-index1" onclick="index2()">No</button>
+    </div>
+
+    <script>
+        function index1() {
+            window.location.href = "index5.html";
+        }
+
+        function index2() {
+            var btnIndex1 = document.getElementById("btnIndex1");
+            var computedStyle = window.getComputedStyle(btnIndex1); // Obtiene el estilo computado del botón
+
+            // Obtiene el ancho y alto actual del botón y les suma 10px para agrandarlo
+            var width = parseFloat(computedStyle.getPropertyValue('width')) + 100;
+            var height = parseFloat(computedStyle.getPropertyValue('height')) + 100;
+            btnIndex1.style.width = width + 'px';
+            btnIndex1.style.height = height + 'px';
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
